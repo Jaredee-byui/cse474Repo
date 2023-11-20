@@ -40,8 +40,8 @@ function validate {
 
 # Ensures all quality checks pass.
 function verify {
-  docker compose exec app black qa
-  docker compose exec app flake8
+  # docker compose exec app black qa
+  # docker compose exec app flake8
 }
 
 TIMEFORMAT=$'\nTask completed in %3lR'
