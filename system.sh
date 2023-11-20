@@ -40,7 +40,7 @@ function validate {
 
 # Ensures all quality checks pass.
 function verify {
-  # docker compose exec app black qa
+  docker compose exec app black qa
   # docker compose exec app flake8
 }
 
