@@ -35,7 +35,7 @@ function stop {
 
 # Runs python unit tests on wsgi.
 function validate {
-  docker compose exec app pytest --cov
+  docker compose exec app pytest
 }
 
 # Ensures all quality checks pass.
