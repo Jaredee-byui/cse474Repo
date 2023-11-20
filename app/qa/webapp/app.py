@@ -2,7 +2,7 @@ from flask import Flask
 from flask_debugtoolbar import DebugToolbarExtension
 
 from qa.webapp.public.routes import public_module
-    
+
 
 def start_app():
     app = _create_app()
@@ -14,14 +14,12 @@ def start_app():
 
 def _create_app():
     return Flask(
-        __name__, 
-        template_folder='shared/templates',
-        static_folder='shared/static'
+        __name__, template_folder="shared/templates", static_folder="shared/static"
     )
 
 
 def _configure_app(app):
-    app.config.from_object('qa.webapp.config')
+    app.config.from_object("qa.webapp.config")
 
 
 def _extend_app(app):

@@ -35,12 +35,13 @@ function stop {
 
 # Runs python unit tests on wsgi.
 function validate {
-  printf "todo: run all tests"
+  docker compose exec app pytest --cov
 }
 
 # Ensures all quality checks pass.
 function verify {
-  printf "todo: run formatting and linting"
+  docker compose exec app black qa
+  docker compose exec app flake8
 }
 
 TIMEFORMAT=$'\nTask completed in %3lR'
